@@ -1,4 +1,6 @@
 version: '{branch}.{build}'
+image: Visual Studio 2017
+
 configuration: Debug
 platform:
 - x86
@@ -8,6 +10,7 @@ before_build:
 build:
   project: 3P.sln
   verbosity: minimal
+  parallel: true
 after_build:
 - cmd: >-
     @echo off
